@@ -1,0 +1,8 @@
+mutation RotateImage ($id: ID!, $direction: RotateDirection = right) {
+  rotateImage(id: $id, direction: $direction) {
+    _id
+    post
+    url(update: true)
+    previewUrl(size: sm, update: true)
+  }
+}

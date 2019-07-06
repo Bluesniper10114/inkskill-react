@@ -1,0 +1,10 @@
+.comment {
+  .footer ul li.button-link {
+    color: #bac8d6;
+    cursor: pointer;
+
+    &:hover {
+      color: #7b95b0;
+    }
+  }
+}

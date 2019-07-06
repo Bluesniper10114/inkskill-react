@@ -1,0 +1,14 @@
+#import "core/graphql/LikeStatsFragment.graphql"
+
+mutation LikePost ($id: ID!, $type: Int) {
+  likePost(id: $id, type: $type) {
+    _id
+    likeType
+    stats {
+      likeTypes
+      likes
+      comments
+    }
+    ...LikeStatsFragment
+  }
+}

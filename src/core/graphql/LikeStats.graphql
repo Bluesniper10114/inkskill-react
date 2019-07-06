@@ -1,0 +1,8 @@
+#import "core/graphql/LikeStatsFragment.graphql"
+
+query LikeStats($postId: ID!) {
+  post(id: $postId) {
+    _id
+    ...LikeStatsFragment
+  }
+}

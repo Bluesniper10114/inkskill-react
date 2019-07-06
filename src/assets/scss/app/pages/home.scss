@@ -1,0 +1,61 @@
+@import "../../color";
+
+.search-box, .search-box-overlay {
+  .delimiter-or {
+    padding: 8px 10px;
+    margin: 5px 0;
+    border-radius: 50%;
+    color: $white-col;
+    text-transform: uppercase;
+    background-color: $red-col - 85%;
+  }
+
+  .carrot {
+    display: none;
+    position: absolute;
+    bottom: -13px;
+    z-index: 99;
+    left: calc(50% - 5px);
+    padding: 0;
+    overflow: hidden;
+
+    &:after {
+      display: inline-block;
+      content: '';
+      transition: all 0.5s ease-out;
+      border: 10px solid transparent;
+      border-bottom-color: #f6c8c8;
+      transform: translateY(15px);
+    }
+
+    &.visible:after {
+      transform: translateY(4px);
+    }
+  }
+}
+
+.overlay .close-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.search-artist-trigger {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .search-box, .search-box-overlay {
+    .delimiter-or {
+      padding: 10px 8px;
+      margin: 0;
+    }
+  }
+
+  .search-artist-trigger {
+    display: inline-block;
+  }
+
+  .carrot {
+    display: block !important;
+  }
+}

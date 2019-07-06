@@ -1,0 +1,100 @@
+@import "../../color";
+
+.style-selector {
+  max-height: 0;
+  overflow: hidden;
+  background-color: #f6c8c8;
+
+  .container {
+    padding-bottom: 20px;
+  }
+
+  .page-header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  }
+
+  .close {
+    opacity: 0.8;
+    path {
+      fill: $dark-col;
+    }
+  }
+
+  label {
+    font-weight: 400;
+    padding: 10px 15px;
+    border-radius: 4px;
+    display: flex;
+    margin-bottom: 20px;
+    cursor: pointer;
+    background-color: #F4A8A8;
+    align-items: center;
+
+    &.selected {
+      background-color: $white-col;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4) inset;
+    }
+  }
+
+  label:before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    border-radius: 3px;
+    margin-right: 10px;
+    background-color: $red-col;
+  }
+
+  label.selected:before {
+    background: url(../img/checkbox.png);
+  }
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+}
+
+@media (max-width: 767px) {
+
+  $mobileHeader: 53px;
+
+  .style-selector {
+    position: fixed;
+    top: $mobileHeader;
+    width: 100%;
+    left: -100%;
+    transition: left 0.25s linear;
+    bottom: 0;
+    max-height: calc(100vh - #{$mobileHeader});
+    z-index: 100;
+    overflow-y: scroll;
+  }
+
+  .style-selector.open {
+    left: 0;
+  }
+
+}
+
+@media (min-width: 768px) {
+  .style-selector {
+    position: relative;
+    transition: max-height 0.5s cubic-bezier(0.41, 0.67, 0.68, 1.03);
+
+    &.open {
+      max-height: 600px;
+      transition: max-height 0.5s ease-in;
+    }
+
+    .close {
+      display: none;
+    }
+
+    .styles-list {
+      display: flex;
+      flex-flow: row wrap;
+    }
+  }
+}

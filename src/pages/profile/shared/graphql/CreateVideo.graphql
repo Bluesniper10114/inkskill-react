@@ -1,0 +1,7 @@
+#import "core/graphql/ShortPostFragment.graphql"
+
+mutation CreateVideo ($data: VideoInput!){
+  createVideo(data: $data) {
+    ...ShortPostFragment
+  }
+}

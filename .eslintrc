@@ -1,0 +1,67 @@
+{
+  "extends": [
+    "airbnb",
+    "plugin:flowtype/recommended"
+  ],
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "globals": {
+    "NODE_ENV": true,
+    "isProduction": true,
+    "__ROUTE__": true
+  },
+  "parser": "babel-eslint",
+  "plugins": [
+    "babel",
+    "flowtype",
+    "dependencies"
+  ],
+  "rules": {
+    "react/jsx-filename-extension": [
+      "error",
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ],
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "ignore"
+      }
+    ],
+    "dependencies/no-cycles": 1,
+    "This next rule is just temporary until we start using PropTypes": 0,
+    "react/prop-types": 0,
+    "react/no-array-index-key": 1,
+    "react/require-default-props": 0,
+    "jsx-a11y/no-static-element-interactions": 0,
+    "import/prefer-default-export": 1,
+    "no-underscore-dangle": 0,
+
+    // TODO: remove rules below
+    "jsx-a11y/img-has-alt": 0,
+    "jsx-a11y/label-has-for": 0,
+    "camelcase": 1,
+    "import/first": 0
+  },
+  "settings": {
+    "import/resolver": {
+      "babel-module": {},
+      "webpack": {
+        "config": "webpack/base.js"
+      }
+    },
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": true
+    }
+  }
+}

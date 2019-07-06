@@ -1,0 +1,77 @@
+.facebook-gallery {
+  button {
+    margin-bottom: 15px;
+  }
+
+  button:first-child {
+    margin-right: 5px;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    position: relative;
+    list-style: none;
+    height: 200px;
+    cursor: pointer;
+    background: no-repeat center center;
+    background-size: cover;
+    margin-bottom: 2px;
+
+    &.selected:after {
+      position: absolute;
+      content: "✓";
+      display: block;
+      color: #fff;
+      font-size: 15px;
+      right: 10px;
+      top: 10px;
+      width: 20px;
+      height: 20px;
+      border: 2px solid;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 18px;
+      background-color: $red-col;
+    }
+  }
+
+  .picture-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: #fff;
+    text-shadow: 0 0 5px #000;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 5px 15px;
+    text-align: center;
+    height: 100%;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  li.invalid .picture-label {
+    cursor: default;
+    background-color: rgba(255, 255, 255, 0.85);
+    color: $red-col;
+    text-shadow: none;
+  }
+
+  li.selected .picture-label {
+    background-color: transparent;
+  }
+
+  @media (min-width: 415px) {
+    li {
+      display: inline-block;
+      width: calc(50% - 2px);
+      margin: 1px;
+    }
+  }
+}

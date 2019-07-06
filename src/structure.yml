@@ -1,0 +1,21 @@
+- src:
+  - core:
+    - components
+    - utils
+  - site:
+    - index
+    - about-us
+    - contact
+    - press
+    - privacy-policy
+  - blog:
+    - list
+    - detail
+  - profile:
+    - wall
+    - images
+    - video
+    - reviews
+    - question
+  - search
+  - news-feed

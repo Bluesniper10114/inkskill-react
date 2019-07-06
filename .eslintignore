@@ -1,0 +1,4 @@
+*.yml
+*.html
+/flow-typed/*
+/src/core/types/*

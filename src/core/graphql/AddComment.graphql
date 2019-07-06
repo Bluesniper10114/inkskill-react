@@ -1,0 +1,19 @@
+mutation AddComment($id: ID!, $comment: String!) {
+  addComment(id: $id, comment: $comment) {
+    _id
+    comment
+    stats {
+      likes
+      replies
+    }
+    user {
+      username
+      name
+      role
+      avatarUrls {
+        sm
+      }
+    }
+    createdAt
+  }
+}

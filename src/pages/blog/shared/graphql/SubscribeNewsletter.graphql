@@ -1,0 +1,5 @@
+mutation SubscribeNewsletter($email: String!) {
+  subscribeNewsletter(email: $email) {
+    _id
+  }
+}

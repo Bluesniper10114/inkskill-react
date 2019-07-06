@@ -1,0 +1,17 @@
+mutation CompleteSignUp ($step: String!, $data: SignUpCompleteInput) {
+  completeSignUp(step: $step, data: $data) {
+    _id
+    username
+    name
+    bio
+    location {
+      gid
+      city
+      state
+      country
+    }
+    role
+    step
+    isVerified
+  }
+}

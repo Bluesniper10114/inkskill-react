@@ -1,0 +1,7 @@
+#import "core/graphql/ShortPostFragment.graphql"
+
+mutation YoutubeImport ($data: [String]!){
+  youtubeImport(data: $data) {
+    ...ShortPostFragment
+  }
+}

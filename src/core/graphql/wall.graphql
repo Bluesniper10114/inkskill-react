@@ -1,0 +1,31 @@
+query Wall($username: String!) {
+  wall(username: $username) {
+    _id
+    post
+    type
+    name
+    url
+    previewUrl
+    createdAt
+    style {
+      _id
+      name
+    }
+    stats {
+      likes
+      likeTypes
+      comments
+    }
+    likeType
+    user {
+      _id
+      name
+      username
+      avatarUrls {
+        original
+        md
+        sm
+      }
+    }
+  }
+}

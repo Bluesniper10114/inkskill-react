@@ -1,0 +1,19 @@
+.post-reply-form {
+  margin-top: 10px;
+  padding-left: 20px;
+
+  textarea {
+    display: block;
+    width: 100%;
+    border-color: #e1e7ed;
+    outline: none;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    resize: vertical;
+    padding: 8px 15px;
+  }
+
+  button {
+    margin-right: 10px;
+  }
+}

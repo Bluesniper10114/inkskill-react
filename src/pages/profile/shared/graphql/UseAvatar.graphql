@@ -1,0 +1,10 @@
+mutation UseAvatar ($service: String!){
+  useAvatar(service: $service) {
+    _id
+    avatarUrls {
+      original
+      sm
+      md
+    }
+  }
+}

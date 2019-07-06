@@ -1,0 +1,6 @@
+query ReviewTags {
+  reviewTags {
+    _id
+    tag
+  }
+}

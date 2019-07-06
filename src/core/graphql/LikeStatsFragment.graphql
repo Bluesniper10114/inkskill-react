@@ -1,0 +1,9 @@
+fragment LikeStatsFragment on Post {
+  likeStats {
+    type
+    total
+    recentPeople {
+      name
+    }
+  }
+}

@@ -1,0 +1,24 @@
+query ProfileById($id: ID!) {
+  profileById(id: $id) {
+    _id
+    username
+    name
+    bio
+    location {
+      city
+      state
+      country
+    }
+    urls {
+      web
+      fb
+      tw
+      gp
+      ig
+    }
+    stats {
+      profileId
+      isFollowing
+    }
+  }
+}

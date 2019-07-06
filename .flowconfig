@@ -1,0 +1,9 @@
+[ignore]
+<PROJECT_ROOT>/node_modules/*
+[include]
+./src/*.js
+[libs]
+./flow-typed/*
+./src/core/types
+[options]
+module.system.node.resolve_dirname=src

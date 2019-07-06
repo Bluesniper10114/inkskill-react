@@ -1,0 +1,7 @@
+#import "core/graphql/ReviewFragment.graphql"
+
+mutation VoteReview($data: ReviewBallotInput!) {
+  voteReview(data: $data) {
+    ...reviewFields
+  }
+}

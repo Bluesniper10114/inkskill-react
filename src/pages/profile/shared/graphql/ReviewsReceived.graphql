@@ -1,0 +1,10 @@
+#import "core/graphql/ReviewFragment.graphql"
+
+query ReviewsReceived($username: String!){
+  profile(username: $username) {
+    _id
+    reviewsReceived {
+      ...reviewFields
+    }
+  }
+}

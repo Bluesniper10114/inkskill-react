@@ -1,0 +1,29 @@
+fragment reviewFields on Review {
+  _id
+  title
+  description
+  artist {
+    _id
+  }
+  user {
+    _id
+    name
+    username
+  }
+  tags {
+    _id
+    tag
+  }
+  stars
+  thumbUpCount
+  thumbDownCount
+  ballots {
+    _id
+    user {
+      _id
+    }
+    vote
+  }
+  status
+  createdAt
+}

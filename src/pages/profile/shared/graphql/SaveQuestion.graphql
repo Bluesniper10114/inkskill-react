@@ -1,0 +1,7 @@
+mutation SaveQuestion ($data: QAInput!){
+  saveQuestion(data: $data) {
+    _id
+    question
+    answer
+  }
+}

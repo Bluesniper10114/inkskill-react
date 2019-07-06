@@ -1,0 +1,8 @@
+@import "color";
+
+svg {
+  &.white path { fill: $white-col; }
+  &.red path { fill: $red-col; }
+  &.gray path { fill: $gray-col; }
+  &.navi path { fill: $navi-col; }
+}

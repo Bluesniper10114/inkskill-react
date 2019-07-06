@@ -1,0 +1,6 @@
+query Styles {
+  styles {
+    _id
+    name
+  }
+}

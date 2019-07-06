@@ -1,0 +1,5 @@
+mutation ReportPost ($id: ID!, $problem: String!) {
+  reportAsset(id: $id, problem: $problem) {
+    _id
+  }
+}

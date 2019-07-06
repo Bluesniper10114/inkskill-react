@@ -1,0 +1,112 @@
+.wizard {
+  padding-top: 20px;
+
+  .steps {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    font-size: 18px;
+    border-bottom: 1px solid darken($body-bg, 15%);
+    justify-content: center;
+
+    li {
+      padding: 20px 40px;
+      position: relative;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: #bac8d6;
+
+      &:after {
+        content: "→";
+        display: inline-block;
+        position: absolute;
+        right: -10px;
+        top: 18px;
+      }
+
+      &:last-child:after {
+        display: none;
+      }
+
+      &.available {
+        color: inherit;
+        cursor: pointer;
+      }
+
+      &.active {
+        color: $red-col;
+      }
+    }
+  }
+
+  .form-buttons {
+    border: 0 solid darken($body-bg, 15%);
+    border-top-width: 1px;
+    text-align: right;
+    padding: 20px 0;
+
+    &.top {
+      border-width: 0 0 1px;
+    }
+
+    &.with-offset .buttons-inner {
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    button {
+      margin-left: 15px;
+    }
+  }
+
+  .step-content {
+    @extend .nice-form;
+    @extend .signup-form;
+
+    // margin: 20px 0;
+    background-color: #fff;
+
+    .step-inner {
+      max-width: 560px;
+      padding: 40px 20px 20px;;
+      margin: 0 auto;
+    }
+
+    .spacer {
+      display: none;
+    }
+
+    .avatar-wrapper {
+      padding: 0 0 40px;
+      text-align: center;
+
+      .upload-pic {
+        visibility: visible;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      .img-box {
+        max-width: 128px;
+        display: inline-block;
+        position: relative;
+      }
+
+      img {
+        border-radius: 50%;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .step-inner {
+      padding: 40px;
+    }
+    .with-offset .buttons-inner {
+      max-width: 460px;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+mutation FollowProfile($id: ID!, $follow: Boolean = true) {
+  followProfile(id: $id, follow: $follow) {
+    _id
+    stats {
+      profileId
+      isFollowing
+      followers
+    }
+  }
+}

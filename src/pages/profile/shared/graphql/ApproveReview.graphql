@@ -1,0 +1,7 @@
+#import "core/graphql/ReviewFragment.graphql"
+
+mutation ApproveReview($data: ReviewApproveInput!) {
+  approveReview(data: $data) {
+    ...reviewFields
+  }
+}

@@ -1,0 +1,10 @@
+mutation UpdateAvatar($imageData: String!) {
+  updateAvatar(imageData: $imageData) {
+    _id
+    avatarUrls {
+      original
+      sm
+      md
+    }
+  }
+}

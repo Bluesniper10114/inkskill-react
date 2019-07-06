@@ -1,0 +1,48 @@
+query Post ($id: ID!){
+  post(id: $id) {
+    _id
+    post
+    type
+    name
+    url
+    previewUrl(size: md)
+    source {
+      id
+      type
+    }
+    style {
+      _id
+      name
+    }
+    user {
+      username
+      name
+      avatarUrls {
+        sm
+      }
+    }
+    stats {
+      likes
+      likeTypes
+      comments
+    }
+    likeType
+    comments {
+      _id
+      comment
+      stats {
+        likes
+        replies
+      }
+      user {
+        username
+        name
+        role
+        avatarUrls {
+          sm
+        }
+      }
+      createdAt
+    }
+  }
+}

@@ -1,0 +1,7 @@
+#import "core/graphql/ReviewFragment.graphql"
+
+mutation CreateReview($artist: ID!, $data: ReviewInput!) {
+  createReview(artist: $artist, data: $data) {
+    ...reviewFields
+  }
+}

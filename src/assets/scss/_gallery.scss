@@ -1,0 +1,117 @@
+@import "color";
+
+.gallery-gallery_wrapper {
+  display: flex;
+  overflow: hidden;
+  border: 1px solid $white-col;
+  background-color: $gallery-max-col;
+}
+
+.gallery-gallery_stage {
+  display: flex;
+  width: 67%;
+  height: 200px;
+}
+
+.gallery-gallery_slides {
+  flex-direction: column;
+  width: 33%;
+  height: 200px;
+}
+
+.gallery-gallery_slide-content {
+  display: flex;
+  height: 50%;
+  border: 1px solid $white-col;
+}
+
+@media only screen and (max-device-width: 416px) {
+  .gallery-gallery_stage,
+  .gallery-gallery_slides {
+    height: 200px;
+  }
+}
+
+aside[class*="gallery_stage"] div[class*="gallery_stage-img"] {
+  border-right: none;
+}
+
+article[class*="gallery_slides1"] {
+  border-left: 1px solid $white-col;
+}
+
+article[class*="gallery_slides2"] {
+  border-left: none;
+  display: none !important;
+}
+
+/** Gallery Loader Part*/
+aside[class*="gallery_loader"],
+article[class*="gallery_slides1"] div[class*="gallery_loader"]:nth-child(2),
+article[class*="gallery_slides1"] div[class*="gallery_loader"]:nth-child(3),
+article[class*="gallery_slides2"] div[class*="gallery_loader"]:nth-child(1) {
+  background-color: $gallery-min-col;
+  animation: blinker1 1.5s infinite ease-in-out alternate;
+}
+@-webkit-keyframes blinker1 {
+  from {opacity: 1.0;}
+  to {opacity: 0.0;}
+}
+@keyframes blinker1 {
+  from {opacity: 1.0;}
+  to {opacity: 0.0;}
+}
+
+article[class*="gallery_slides1"] div[class*="gallery_loader"]:nth-child(1),
+article[class*="gallery_slides2"] div[class*="gallery_loader"]:nth-child(2) {
+  background-color: $gallery-min-col;
+  animation: blinker2 1.5s infinite ease-in-out alternate;
+}
+@-webkit-keyframes blinker2 {
+  from {opacity: 0.0;}
+  to {opacity: 1.0;}
+}
+@keyframes blinker2 {
+  from {opacity: 0.0;}
+  to {opacity: 1.0;}
+}
+
+aside[class*="gallery_loader"] div[class*="gallery_stage"],
+div[class*="gallery_loader"] div[class*="gallery_slide-img"] {
+  opacity: 0;
+}
+
+
+/*
+aside[class*="gallery_stage"] {
+  width: 67% !important;
+}
+
+article[class*="gallery_slides"] {
+  width: 33% !important;
+}
+
+.gallery-more {
+  article[class*="gallery_slides1"] {
+    div[class*="gallery_slide-content"]:nth-child(2) {
+      display: none !important;
+    }
+  }
+  article[class*="gallery_slides1"] {
+    div[class*="gallery_slide-content"]:nth-child(3) {
+      display: block !important;
+    }
+  }
+}
+
+.gallery-4 {
+  article[class*="gallery_slides1"] {
+    div[class*="gallery_slide-content"] {
+      height: 50% !important;
+    }
+    div[class*="gallery_slide-content"]:nth-child(2) {
+      display: block !important;
+    }
+  }
+}
+*/

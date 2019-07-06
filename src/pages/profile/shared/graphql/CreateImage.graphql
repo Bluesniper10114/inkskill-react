@@ -1,0 +1,7 @@
+#import "core/graphql/ShortPostFragment.graphql"
+
+mutation CreateImage ($data: ImageInput!){
+  createImage(data: $data) {
+    ...ShortPostFragment
+  }
+}

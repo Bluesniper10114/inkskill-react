@@ -1,0 +1,14 @@
+query PostLikes($postId: ID!) {
+  post(id: $postId) {
+    _id
+    likedBy {
+      _id
+      name
+      username
+      role
+      avatarUrls {
+        md
+      }
+    }
+  }
+}

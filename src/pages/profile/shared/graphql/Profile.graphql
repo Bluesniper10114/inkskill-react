@@ -1,0 +1,35 @@
+query Profile($username: String!){
+  profile(username: $username) {
+    _id
+    username
+    name
+    bio
+    gender
+    role
+    deleted
+    avatarUrls {
+      md
+    }
+    wallpaperUrl
+    urls {
+      web
+      fb
+      tw
+      gp
+      ig
+    }
+    location {
+      gid
+      city
+      state
+      country
+    }
+    stats {
+      profileId
+      isFollowing
+      posts
+      followers
+      following
+    }
+  }
+}

@@ -1,0 +1,15 @@
+fragment ShortPostFragment on Post {
+  _id
+  post
+  type
+  name
+  previewUrl
+  style {
+    _id
+    name
+  }
+  stats {
+    likes
+    comments
+  }
+}

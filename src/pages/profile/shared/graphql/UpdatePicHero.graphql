@@ -1,0 +1,6 @@
+mutation UpdatePicHero($imageData: String!) {
+  updatePicHero(imageData: $imageData) {
+    _id
+    wallpaperUrl
+  }
+}

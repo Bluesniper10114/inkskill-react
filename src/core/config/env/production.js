@@ -1,0 +1,9 @@
+export const SITE_URL = 'http://www-temp.inkskill.com';
+export const IMAGES_URL = `${SITE_URL}/public/media`;
+export const API_KEY = 'INKSKILL@#2016!';
+export const API_BASE_URL = '/api';
+export const FB_APP_ID = '537011759668133';
+export const GOOGLE_ID = '130749551236-kv9i6efnkg24fn9h369rnblkd42dl289';
+export const INSTAGRAM_ID = '3c9f624df2f44cc3b44bed890c836a3c';
+export const BLOG_SITE_URL = 'http://blog.inkskill.com';
+export const GOOGLE_ANALYTICS = 'UA-89947217-1';

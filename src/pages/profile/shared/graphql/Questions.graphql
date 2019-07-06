@@ -1,0 +1,10 @@
+query ProfileQuestions($username: String!){
+  profile(username: $username) {
+    _id
+    questions {
+      _id
+      question
+      answer
+    }
+  }
+}

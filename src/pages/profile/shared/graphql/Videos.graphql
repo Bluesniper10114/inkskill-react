@@ -1,0 +1,10 @@
+#import "core/graphql/ShortPostFragment.graphql"
+
+query ProfileImages($username: String!){
+  profile(username: $username) {
+    _id
+    videos {
+      ...ShortPostFragment
+    }
+  }
+}

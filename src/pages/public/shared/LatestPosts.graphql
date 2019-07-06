@@ -1,0 +1,11 @@
+#import "core/graphql/ShortPostFragment.graphql"
+
+query LatestPosts {
+  latestPosts {
+    ...ShortPostFragment
+    user {
+      username
+      name
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.RadioGroup {
+  .RadioItem {
+    $size: 18px;
+    $checkbox: $size - 6px;
+
+    label {
+      position: relative;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    label:before {
+      content: "";
+      display: inline-block;
+      width: $size;
+      height: $size;
+      border: 1px solid #ccc;
+      margin-right: 7px;
+    }
+
+    input:checked + label:after {
+      content: "";
+      display: inline-block;
+      width: $checkbox;
+      height: $checkbox;
+      background-color: $red-col;
+      position: absolute;
+      left: 3px;
+      top: calc(50% - #{$checkbox / 2});
+    }
+
+    input {
+      display: none;
+    }
+  }
+
+  &.inline .RadioItem {
+    margin-left: 10px;
+    display: inline-block;
+  }
+}
